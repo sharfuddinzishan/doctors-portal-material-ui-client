@@ -35,7 +35,7 @@ const Appointments = ({ appointDate }) => {
     const { user } = useAuth();
     const [appointments, setAppointments] = useState([]);
     useEffect(() => {
-        axios.get(`http://localhost:4000/appointments?email=${user?.email}&&appointDate=${appointDate}`)
+        axios.get(`https://hero-doctors.herokuapp.com/appointments?email=${user?.email}&&appointDate=${appointDate}`)
             .then(result => {
                 setAppointments(result.data)
             })

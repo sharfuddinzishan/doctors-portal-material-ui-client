@@ -46,7 +46,7 @@ const ModalBooking = ({ open, handleClose, booking, appointDate, setBookingStatu
         }
         let action = window.confirm('submit booking request?');
         if (action) {
-            axios.post(`http://localhost:4000/appointments`, appointment)
+            axios.post(`https://hero-doctors.herokuapp.com/appointments`, appointment)
                 .then(() => {
                     alert('Appointment Done')
                     setBookingStatus(true);
